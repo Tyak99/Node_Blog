@@ -39,7 +39,7 @@ app.use(function(req, res, next){
 
 //RESTFUL ROUTES
 app.get("/", function(req, res){
-	res.redirect("/index")
+	res.render("home")
 })
 // INDEX ROUTE
 app.get("/blogs", function(req, res){
