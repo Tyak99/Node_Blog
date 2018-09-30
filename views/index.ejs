@@ -1,0 +1,78 @@
+<% include ./partials/header %>
+
+<div class="ui grid container">
+  <div class="row" id="page-header">
+    <div class="ui basic segment">
+      <h1 class="ui sub header">
+        Welcome to  My-Animation Blog
+      </h1>
+      <span>A simple blog to check out animations and add your favourites</span>
+    </div>
+  </div>
+  <div class="row" id="article">
+    <div class="eleven wide column">
+      <h2 class="ui sub header">
+        Anime blog post
+      </h2>
+      <span>September 30, 2018 by <a href="#">Nasri</a></span>
+      <% blogs.forEach(function(blog){ %>
+      
+      <div class="ui hidden divider"></div>
+      <div class="ui divider"></div>
+     	<h2> <%= blog.title %> </h2> 
+      
+      <div class = "image"> <img class = "ui large image" src="<%= blog.image %>"> </div>
+      <p> <%= blog.body.substring(0, 100) %>... 
+      		<a href = "/blogs/<%- blog._id%>"> Read more </a>
+      </p>
+      <span> <%= blog.created %> </span>
+		
+   <%}) %>
+</div>
+<style type="text/css">
+  body {
+    font-family: Georgia, "Times New Roman", "Times", serif;
+  }
+  
+  .ui.inverted.pointing.menu .active.item:after {
+    background-color: white !important;
+  }
+  
+  .ui.sub.header {
+    text-transform: none;
+  }
+  
+  #page-header {
+    margin-top: 4em;
+  }
+  #page-header h1 {
+    font-size: 60px;
+  }
+  #page-header span {
+    font-size: 20px;
+    color: grey;
+  }
+  
+  #article {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+  #article h2 {
+    font-size: 40px;
+  }
+  #article span {
+    color: grey;
+  }
+  #article .four.wide.column .ui.secondary.segment {
+    border: none;
+  }
+  #article .four.wide.column .ui.list .item {
+    font-size: 14px;
+  }
+  
+</style>
+
+<% include ./partials/footer %>
+
+
+
