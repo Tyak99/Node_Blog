@@ -8,7 +8,10 @@ var LocalStrategy = require("passport-local");
 var express = require("express");
 var app = express();
 // APP CONFIG
-mongoose.connect("mongodb://localhost/blog_app_2");
+
+// mongoose.connect("mongodb://localhost/blog_app_2");
+mongoose.connect("mongodb://nasridb:Lollipop99@ds119523.mlab.com:19523/blogapp");
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
