@@ -6,7 +6,7 @@
       <h1 class="ui sub header">
         Welcome to  My-Animation Blog
       </h1>
-      <span>A simple blog to check out animations and add your favourites <br> <hr> Feel free to add your favourite anime by clicking the NEW POST menu above</span>
+      <span>A simple blog to check out animations and add your favourites <br> <hr> Feel free to add your favourite anime by clicking the NEW POST menu above <br> ...And oh!! you must be logged in <i class="small sign-in icon"></i></span>
     </div>
   </div>
   <div class="row" id="article">
@@ -19,7 +19,7 @@
       
       <div class="ui hidden divider"></div>
       <div class="ui divider"></div>
-     	<h2> <%= blog.title %> </h2> 
+     	<h2 class ="ui header purple"> <%= blog.title %> </h2> 
       
       <div class = "image"> <img class = "ui large image" src="<%= blog.image %>"> </div>
       <p> <%= blog.body.substring(0, 100) %>... 
