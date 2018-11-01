@@ -14,7 +14,7 @@
 		
 	</head>
 	<body> 
-		<div class = "ui fixed inverted menu">
+		<div class = "ui  inverted menu">
 				<div class = "header item"><i class = "code icon"> </i> <a href ="/blogs"> Blog Site </a> </div>
 				<a href = "/blogs/new" class = "item"> New Post </a>
 				<div class = "right menu">
@@ -29,7 +29,17 @@
 					<% } %>
 				</div>
 		</div>
-		
+
+		<% if(error && error.length > 0) {%>
+		 <div class="ui container warning message">
+                <h2> <%= error %> </h2>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0) {%>
+            <div class="ui container positive message">
+                <h2> <%= success %> </h2>
+            </div>	
+        <% } %>	
 
 		
 

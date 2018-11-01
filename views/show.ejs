@@ -8,14 +8,29 @@
 					<span> <%= blog.created.toDateString() %> </span>
 				</div>
 				<div class = "description">
-					<p> <%= blog.body %> </p> 
+					<p id="bb"> <%= blog.body %> </p> 
+					<p> <strong><em> Submitted by <%= blog.user.username %> </em></strong> </p>
 			 	</div>
+			 	<% if(currentUser && currentUser._id.equals(blog.user.id)) { %>
 			 	<a href = "/blogs/<%= blog._id %>/edit"  class = "ui violet basic button"> Edit Blog </a>
 			 	<form action = "/blogs/<%= blog._id %>?_method=DELETE"  method = "POST" id="delete">
 			 		<button class = "ui red basic button"> DELETE </button>
 			 	</form>
+			 	<% } %>
 			</div>
 		</div>
 	</div>
+
+	<div class = "ui main container segment">
+	<div class="ui sizer vertical segment">
+  <div class="ui huge header">Huge Header</div>
+
+  <p> Lorem ipsum dolor sit amet,sed diam nonumy eirmod tempor 
+  invidunt ut labore et dolore magna aliquyam erat, 
+   At vero eos et accusam et justo duo dolores et ea rebum.  
+  </p>
+  </div>
+	</div>
+
 
 <% include ./partials/footer %>
