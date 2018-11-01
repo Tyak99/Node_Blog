@@ -13,9 +13,9 @@ var blogRoute = require("./routes/blog");
 var indexRoutes = require("./routes/index");
 // APP CONFIG
 
-// mongoose.connect(process.env.DATABASEURL);
-mongoose.connect("mongodb://localhost/blog_app_2");
-// mongoose.connect("mongodb://nasridb:Lollipop99@ds119523.mlab.com:19523/blogapp");
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb://localhost/blog_app_2");
+mongoose.connect("mongodb://nasridb:Lollipop99@ds119523.mlab.com:19523/blogapp");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
